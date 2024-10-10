@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', ()=> {
 const colorContainers = document.getElementsByClassName("color-wrapper");
 
 if (colorContainers) {
@@ -7,3 +8,4 @@ if (colorContainers) {
     });
   });
 }
+});

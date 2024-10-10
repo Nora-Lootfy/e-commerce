@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', ()=> {
 const governmentsSelect = document.querySelector(".governments");
 
 if (governmentsSelect) {
@@ -19,3 +20,4 @@ if (governmentsSelect) {
       console.error("There was a problem with the fetch operation:", error);
     });
 }
+});

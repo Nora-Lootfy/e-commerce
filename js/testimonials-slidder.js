@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', ()=> {
 const testimonialsContainer = document.querySelector(
   "#testimonials .test-container"
 );
@@ -96,3 +97,4 @@ function move(container, items, step) {
     }
   });
 }
+});

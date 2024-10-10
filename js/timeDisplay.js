@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', ()=> {
 const time = document.querySelector(".time");
 
 if (time) {
@@ -49,3 +50,4 @@ if (time) {
     }
   }
 }
+});

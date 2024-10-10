@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', ()=> {
 // section to work with
 const section = document.getElementById("deals-of-month");
 
@@ -130,3 +131,4 @@ function renderProducts(items, productContainer) {
     productContainer.appendChild(item.product);
   });
 }
+});
