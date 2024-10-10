@@ -1,0 +1,20 @@
+$primary: #5B86E5;
+$secondary: #484848;
+$danger: #DA3F3F;
+$dark: #343a40;
+
+$breadcrumb-divider: quote(">");
+
+$accordion-border-width: 0;
+$accordion-bg: #00000000;
+$accordion-button-focus-border-color: #00000000;
+$accordion-button-focus-box-shadow: #00000000;
+$accordion-button-bg: #00000000;
+$accordion-button-active-bg: #F8F8F856;
+
+$progress-height: 0.5rem;
+
+$offcanvas-horizontal-width: 700px;
+$offcanvas-padding-x: 1rem;
+
+@import "~bootstrap/scss/bootstrap";

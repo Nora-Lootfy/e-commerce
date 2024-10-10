@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart page</title>
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="py-3">
+      <div
+        class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between"
+      >
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a href="/" class="mb-3 mb-md-0 me-md-auto text-decoration-none">
+            <h1 class="text-secondary fw-normal" style="font-size: 50px">
+              FASCO
+            </h1>
+          </a>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li class="nav-item">
+            <a href="/" class="nav-link text-secondary px-4 py-2">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="shop.html" class="nav-link text-secondary px-4 py-2"
+              >Shop</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link text-secondary px-4 py-2"
+              >Products</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-secondary px-4 py-2">Pages</a>
+          </li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+          <a href="#"><img src="images/search.svg" alt="Search" /></a>
+          <a href="#"><img src="images/profile.svg" alt="Profile" /></a>
+          <a href="#"><img src="images/star.svg" alt="Favoriutes" /></a>
+          <a href="cart.html"><img src="images/cart.svg" alt="Cart" /></a>
+        </div>
+      </div>
+    </header>
+
+    <section id="bread-crumb" style="padding-top: 5rem; padding-bottom: 5rem">
+      <div class="container text-center">
+        <h2 class="h1">Shopping Cart</h2>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb p-3 justify-content-center">
+            <li class="breadcrumb-item">
+              <a href="/" class="text-black text-decoration-none">Home</a>
+            </li>
+            <li class="breadcrumb-item active text-black" aria-current="page">
+              Your Shopping Cart
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section id="cart">
+      <div class="container">
+        <div class="table-responsive" style="max-height: 80vh;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">
+                  <div class="row" style="width:500px; max-width:95vw">
+                    <div class="col-5">
+                      <img
+                        src="images/products/product7.png"
+                        alt="Fashion model"
+                        style="height: 225px; object-fit: cover"
+                        class="w-100"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <h3 class="product-name">Denim Jacket</h3>
+                      <p class="text-secondary">
+                        Color : <span class="product-color">Red</span>
+                      </p>
+
+                      <a href="#" class="text-secondary">Remove</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="product-price">$14.80</td>
+                <td>
+                  <div
+                    class="d-flex flex-nowrap align-items-center quantity-wrapper"
+                    style="border: 1px solid #eee; width: 135px"
+                  >
+                    <button id="minus" class="btn p-3">
+                      <svg
+                        width="11"
+                        height="3"
+                        viewBox="0 0 11 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.8125 0.9375H1.1875C1.08391 0.9375 1 1.02141 1 1.125V1.875C1 1.97859 1.08391 2.0625 1.1875 2.0625H9.8125C9.91609 2.0625 10 1.97859 10 1.875V1.125C10 1.02141 9.91609 0.9375 9.8125 0.9375Z"
+                          fill="black"
+                          stroke="black"
+                          stroke-width="0.0234375"
+                        />
+                      </svg>
+                    </button>
+                    <span class="p-3">1</span>
+                    <button id="plus" class="btn p-3">
+                      <svg
+                        width="13"
+                        height="13"
+                        viewBox="0 0 13 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.8125 5.9375H7.0625V2.1875C7.0625 2.08391 6.97859 2 6.875 2H6.125C6.02141 2 5.9375 2.08391 5.9375 2.1875V5.9375H2.1875C2.08391 5.9375 2 6.02141 2 6.125V6.875C2 6.97859 2.08391 7.0625 2.1875 7.0625H5.9375V10.8125C5.9375 10.9161 6.02141 11 6.125 11H6.875C6.97859 11 7.0625 10.9161 7.0625 10.8125V7.0625H10.8125C10.9161 7.0625 11 6.97859 11 6.875V6.125C11 6.02141 10.9161 5.9375 10.8125 5.9375Z"
+                          fill="black"
+                          stroke="black"
+                          stroke-width="0.0234375"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td class="product-price-total">$14.80</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="max-width: 550px; margin-left: auto; margin-top: 20px;">
+          <div class="form-group pb-3 border-bottom mb-2">
+            <label style="color: #8a8a8a; font-size: 20px"
+              ><input
+                type="checkbox"
+                class="form-check-input me-3"
+                style="padding: 10px"
+              />For <span class="text-black">$10.00</span> please wrap the
+              product</label
+            >
+          </div>
+          <div class="d-flex justify-content-between mb-4">
+            <span style="font-family: volkhov, serif;">Subtotal</span>
+            <span class="product-price">100$</span>
+          </div>
+          <div class="text-center">
+            <button
+              class="btn text-white px-5 py-2 w-75"
+              style="background-color: #000"
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      style="
+        background-color: #fff;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        overflow: hidden;
+      "
+      id="subscribe-to-newsletter"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 d-none d-lg-block rounded-3">
+            <img src="images/foot1.png" alt="Fashion model" class="img-fluid" />
+          </div>
+          <div
+            class="col-lg-6 d-flex flex-column justify-content-center align-items-center"
+            style="max-width: 630px; gap: 15px"
+          >
+            <div
+              class="text-center newsletter-wrapper rounded-3"
+              style="padding: 30px"
+            >
+              <h2 class="text-secondary h1 fw-normal">
+                Subscribe To Our Newsletter
+              </h2>
+              <p class="mt-2 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque
+                duis ultrices sollicitudin
+                <span class="d-block mt-3 fs-5 text-start ps-1"
+                  >michael@ymail.com</span
+                >
+              </p>
+            </div>
+            <a
+              href="#"
+              class="btn text-white px-5 py-2"
+              style="background-color: #000"
+              >Subscribe Now</a
+            >
+          </div>
+          <div class="col-lg-3 d-none d-lg-block rounded-3">
+            <img src="images/foot2.png" alt="Fashion model" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 d-flex align-items-center">
+            <a
+              href="/"
+              class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+            >
+              <h2 class="text-secondary fw-normal" style="font-size: 25px">
+                FASCO
+              </h2>
+            </a>
+          </div>
+          <ul class="nav col-md-8 justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >Support Center</a
+              >
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >Invoicing</a
+              >
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >Contract</a
+              >
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >Careers</a
+              >
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >Blog</a
+              >
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >FQA</a
+              >
+            </li>
+          </ul>
+        </div>
+        <span
+          class="mb-3 mb-md-0 text-body-secondary d-block text-center"
+          style="font-size: 12px"
+          >Copyright © 2022 Xpro . All Rights Reseved.</span
+        >
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

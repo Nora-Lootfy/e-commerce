@@ -1,0 +1,36 @@
+# Laravel specific
+/vendor
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/storage/framework/*
+/storage/logs/*
+/storage/app/public
+
+# Environment files
+.env
+.env.*.local
+
+# IDE or Editor specific
+.vscode
+.idea
+
+# Composer files
+composer.phar
+
+# NPM files
+npm-debug.log
+yarn-error.log
+yarn.lock
+pnpm-lock.yaml
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# PHPUnit
+phpunit.xml
+
+# Other
+/.phpunit.result.cache

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout page</title>
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="py-3">
+      <div
+        class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between"
+      >
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a href="/" class="mb-3 mb-md-0 me-md-auto text-decoration-none">
+            <h1 class="text-secondary fw-normal" style="font-size: 50px">
+              FASCO
+            </h1>
+          </a>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li class="nav-item">
+            <a href="/" class="nav-link text-secondary px-4 py-2">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="shop.html" class="nav-link text-secondary px-4 py-2"
+              >Shop</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link text-secondary px-4 py-2"
+              >Products</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-secondary px-4 py-2">Pages</a>
+          </li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+          <a href="#"><img src="images/search.svg" alt="Search" /></a>
+          <a href="#"><img src="images/profile.svg" alt="Profile" /></a>
+          <a href="#"><img src="images/star.svg" alt="Favoriutes" /></a>
+          <a href="cart.html"><img src="images/cart.svg" alt="Cart" /></a>
+        </div>
+      </div>
+    </header>
+
+    <section id="checkout">
+      <h2
+        class="h1 text-center mb-0"
+        style="
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.39);
+        "
+      >
+        FASCO checkout
+      </h2>
+      <div class="container">
+        <div
+          class="row g-0 border-bottom"
+          style="border-color: rgba(0, 0, 0, 0.39)"
+        >
+          <div
+            class="col-md-6 border-end px-3 px-lg-5 pt-5"
+            style="border-color: rgba(0, 0, 0, 0.39)"
+          >
+            <form action="">
+              <div class="contact mb-5">
+                <div
+                  class="d-flex justify-content-between mb-2 align-items-center"
+                >
+                  <h3 class="text-secondary">Contact</h3>
+                  <p style="font-size: 12px">
+                    Have an account?
+                    <a href="sign-up.html" class="text-decoration-none"
+                      >Create Account</a
+                    >
+                  </p>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Email Adrress"
+                  class="form-control"
+                  aria-label="Email Address"
+                  required
+                />
+              </div>
+
+              <div class="delivery mb-5">
+                <h3 class="text-secondary">Delivery</h3>
+
+                <div class="row g-1">
+                  <div class="col-12 mb-2">
+                    <select name="" class="form-control governments" required>
+                      <option value="" disabled selected>
+                        Country / Region
+                      </option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-2">
+                    <input
+                      type="text"
+                      placeholder="First Name"
+                      class="form-control"
+                      aria-label="First Name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-2">
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      class="form-control"
+                      aria-label="Last Name"
+                      required
+                    />
+                  </div>
+                  <div class="col-12 mb-2">
+                    <input
+                      type="text"
+                      placeholder="Address"
+                      class="form-control"
+                      aria-label="Address"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-2">
+                    <input
+                      type="text"
+                      placeholder="City"
+                      class="form-control"
+                      aria-label="City"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-2">
+                    <input
+                      type="text"
+                      placeholder="Postal Code"
+                      class="form-control"
+                      aria-label="Postal Code"
+                      required
+                    />
+                  </div>
+                  <label style="color: #8a8a8a; line-height: 150%"
+                    ><input
+                      type="checkbox"
+                      class="form-check-input me-2"
+                      style="padding: 10px; border-radius: 0"
+                    />Save This Info for future</label
+                  >
+                </div>
+              </div>
+
+              <div class="payment mb-5">
+                <h3 class="text-secondary">Payment</h3>
+
+                <div class="row g-1">
+                  <div class="col-12 mb-2">
+                    <select name="" class="form-control governments" required>
+                      <option value="credit">Credit</option>
+                      <option value="cash">Cash on Delivery</option>
+                    </select>
+                  </div>
+                  <div class="col-12 mb-2">
+                    <input
+                      type="text"
+                      placeholder="Card Number"
+                      class="form-control"
+                      aria-label="Card Number"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-2">
+                    <input
+                      type="text"
+                      placeholder="MM/YY"
+                      class="form-control"
+                      aria-label="Expiration Date"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-2">
+                    <input
+                      type="text"
+                      placeholder="CVV"
+                      class="form-control"
+                      aria-label="Security Code CVV"
+                      required
+                    />
+                  </div>
+                  <div class="col-12 mb-2">
+                    <input
+                      type="text"
+                      placeholder="Card Holder Name"
+                      class="form-control"
+                      aria-label="Card Holder Name"
+                      required
+                    />
+                  </div>
+                  <label style="color: #8a8a8a; line-height: 150%"
+                    ><input
+                      type="checkbox"
+                      class="form-check-input me-2"
+                      style="padding: 10px; border-radius: 0"
+                    />Save This Info for future</label
+                  >
+                </div>
+              </div>
+              <div class="text-center">
+                <button
+                  class="btn mb-4 text-white w-75 py-3"
+                  style="
+                    background-color: #000;
+                    box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.15);
+                  "
+                >
+                  Pay Now
+                </button>
+                <p style="font-size: 12px" class="mb-5">
+                  Copyright © 2022 FASCO . All Rights Reseved.
+                </p>
+              </div>
+            </form>
+          </div>
+          <div
+            class="col-md-6"
+            style="background-color: #f5f5f5; height: 800px"
+          >
+            <div
+              class="wrapper scroll-hide"
+              style="max-height: 500px; overflow-y: scroll; overflow-x: hidden"
+            >
+              <div class="row p-3 px-lg-5 product-checkout">
+                <div class="col-4 col-lg-3 position-relative">
+                  <div class="w-100 overflow-hidden">
+                    <img
+                      src="images/products/product7.png"
+                      alt="Fashion model"
+                      style="height: 137px; width: 137px; object-fit: cover"
+                    />
+                  </div>
+                  <span
+                    class="position-absolute top-0 end-0 d-flex justify-content-center align-items-center"
+                    style="
+                      transform: translateY(-50%);
+                      background-color: #ff1313;
+                      border-radius: 50%;
+                      width: 25px;
+                      height: 25px;
+                      color: #fff;
+                      font-size: 12px;
+                    "
+                    >1</span
+                  >
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center">
+                  <h3 class="product-name h5">Denim Jacket</h3>
+                  <div class="d-flex justify-content-between">
+                    <p class="text-secondary" style="font-size: 12px">Red</p>
+                    <p class="text-secondary" style="font-size: 12px">
+                      $100.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row p-3 px-lg-5 product-checkout">
+                <div class="col-4 col-lg-3 position-relative">
+                  <div class="w-100 overflow-hidden">
+                    <img
+                      src="images/products/product6.png"
+                      alt="Fashion model"
+                      style="height: 137px; width: 137px; object-fit: cover"
+                    />
+                  </div>
+                  <span
+                    class="position-absolute top-0 end-0 d-flex justify-content-center align-items-center"
+                    style="
+                      transform: translateY(-50%);
+                      background-color: #ff1313;
+                      border-radius: 50%;
+                      width: 25px;
+                      height: 25px;
+                      color: #fff;
+                      font-size: 12px;
+                    "
+                    >1</span
+                  >
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center">
+                  <h3 class="product-name h5">Denim Jacket</h3>
+                  <div class="d-flex justify-content-between">
+                    <p class="text-secondary" style="font-size: 12px">Red</p>
+                    <p class="text-secondary" style="font-size: 12px">
+                      $100.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row p-3 px-lg-5 product-checkout">
+                <div class="col-4 col-lg-3 position-relative">
+                  <div class="w-100 overflow-hidden">
+                    <img
+                      src="images/products/product7.png"
+                      alt="Fashion model"
+                      style="height: 137px; width: 137px; object-fit: cover"
+                    />
+                  </div>
+                  <span
+                    class="position-absolute top-0 end-0 d-flex justify-content-center align-items-center"
+                    style="
+                      transform: translateY(-50%);
+                      background-color: #ff1313;
+                      border-radius: 50%;
+                      width: 25px;
+                      height: 25px;
+                      color: #fff;
+                      font-size: 12px;
+                    "
+                    >1</span
+                  >
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center">
+                  <h3 class="product-name h5">Denim Jacket</h3>
+                  <div class="d-flex justify-content-between">
+                    <p class="text-secondary" style="font-size: 12px">Red</p>
+                    <p class="text-secondary" style="font-size: 12px">
+                      $100.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row p-3 px-lg-5 product-checkout">
+                <div class="col-4 col-lg-3 position-relative">
+                  <div class="w-100 overflow-hidden">
+                    <img
+                      src="images/products/product6.png"
+                      alt="Fashion model"
+                      style="height: 137px; width: 137px; object-fit: cover"
+                    />
+                  </div>
+                  <span
+                    class="position-absolute top-0 end-0 d-flex justify-content-center align-items-center"
+                    style="
+                      transform: translateY(-50%);
+                      background-color: #ff1313;
+                      border-radius: 50%;
+                      width: 25px;
+                      height: 25px;
+                      color: #fff;
+                      font-size: 12px;
+                    "
+                    >1</span
+                  >
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center">
+                  <h3 class="product-name h5">Denim Jacket</h3>
+                  <div class="d-flex justify-content-between">
+                    <p class="text-secondary" style="font-size: 12px">Red</p>
+                    <p class="text-secondary" style="font-size: 12px">
+                      $100.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row p-3 px-lg-5">
+              <div class="col-md-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Discount Code"
+                  aria-label="Discount Code"
+                />
+              </div>
+              <div class="col-md-4">
+                <button
+                  class="btn mb-4 text-white w-75"
+                  style="
+                    background-color: #000;
+                    box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.15);
+                    padding: 15px 0;
+                  "
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+
+            <div class="row p-3 px-lg-5">
+              <p class="d-flex justify-content-between text-secondary">
+                <span>Subtotal</span>
+                <span class="pe-lg-4">$100.00</span>
+              </p>
+              <p class="d-flex justify-content-between text-secondary">
+                <span>Shipping</span>
+                <span class="pe-lg-4">$10.00</span>
+              </p>
+              <p class="d-flex justify-content-between text-secondary">
+                <span>Total</span>
+                <span class="pe-lg-4">$110.00</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      style="
+        background-color: #fff;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        overflow: hidden;
+      "
+      id="subscribe-to-newsletter"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 d-none d-lg-block rounded-3">
+            <img src="images/foot1.png" alt="Fashion model" class="img-fluid" />
+          </div>
+          <div
+            class="col-lg-6 d-flex flex-column justify-content-center align-items-center"
+            style="max-width: 630px; gap: 15px"
+          >
+            <div
+              class="text-center newsletter-wrapper rounded-3"
+              style="padding: 30px"
+            >
+              <h2 class="text-secondary h1 fw-normal">
+                Subscribe To Our Newsletter
+              </h2>
+              <p class="mt-2 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque
+                duis ultrices sollicitudin
+                <span class="d-block mt-3 fs-5 text-start ps-1"
+                  >michael@ymail.com</span
+                >
+              </p>
+            </div>
+            <a
+              href="#"
+              class="btn text-white px-5 py-2"
+              style="background-color: #000"
+              >Subscribe Now</a
+            >
+          </div>
+          <div class="col-lg-3 d-none d-lg-block rounded-3">
+            <img src="images/foot2.png" alt="Fashion model" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 d-flex align-items-center">
+            <a
+              href="/"
+              class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+            >
+              <h2 class="text-secondary fw-normal" style="font-size: 25px">
+                FASCO
+              </h2>
+            </a>
+          </div>
+          <ul class="nav col-md-8 justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >Support Center</a
+              >
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >Invoicing</a
+              >
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >Contract</a
+              >
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >Careers</a
+              >
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >Blog</a
+              >
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary text-decoration-none" href="#"
+                >FQA</a
+              >
+            </li>
+          </ul>
+        </div>
+        <span
+          class="mb-3 mb-md-0 text-body-secondary d-block text-center"
+          style="font-size: 12px"
+          >Copyright © 2022 Xpro . All Rights Reseved.</span
+        >
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/governments.js"></script>
+  </body>
+</html>
