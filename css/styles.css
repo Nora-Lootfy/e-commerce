@@ -54,7 +54,7 @@ h2,
 h3,
 h4,
 h5,
-h6, 
+h6,
 th {
   font-family: volkhov, serif;
 }
@@ -139,12 +139,12 @@ th {
 }
 
 .products-wrapper .sold-out:after {
-  content: 'Sold out';
+  content: "Sold out";
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  color: #FFF;
-  background-color: #B1B1B1;
+  color: #fff;
+  background-color: #b1b1b1;
   text-align: center;
   padding: 5px;
   position: absolute;
@@ -212,12 +212,12 @@ th {
 
 .categories a {
   padding: 10px 20px;
-  text-decoration: none;
-  color: #8a8a8a;
+  text-decoration: none !important;
+  color: #8a8a8a !important;
 }
 
 .categories a.active {
-  color: #fff;
+  color: #fff !important;
   background-color: #000;
   border-radius: 10px;
 }
@@ -337,7 +337,7 @@ th {
   gap: 5px;
 }
 
-.sizes-wrapper button{
+.sizes-wrapper button {
   width: 45px;
   height: 45px;
   font-size: 14px;
@@ -345,9 +345,13 @@ th {
   text-align: center;
 }
 
+.price-wrapper button.selected,
+.brands-wrapper button.selected,
+.collections-wrapper button.selected,
+.tags-wrapper button.selected,
 .sizes-wrapper button.selected {
   background-color: #000;
-  color: #FFF;
+  color: #fff;
 }
 
 .color-wrapper button {
@@ -357,7 +361,7 @@ th {
 }
 
 .color-wrapper button.selected {
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   box-shadow: 0 0px 3px rgb(0, 0, 0);
 }
 
@@ -375,7 +379,7 @@ th {
   color: #000 !important;
 }
 
-.pagination  a {
+.pagination a {
   width: 44px;
   height: 44px;
   display: flex;
@@ -384,7 +388,7 @@ th {
 }
 
 .pagination .active {
-  background-color: #F3F3F3 !important;
+  background-color: #f3f3f3 !important;
   border-radius: 50%;
 }
 
@@ -428,7 +432,7 @@ table tr td {
 }
 
 #checkout .form-control {
-  border: 1px solid #8A8A8A;
+  border: 1px solid #8a8a8a;
   padding: 15px 10px;
   color: #5f6265;
 }
@@ -437,7 +441,7 @@ input:focus:invalid {
   border-color: #fe746f !important;
 }
 
-.form-check-input:focus{
+.form-check-input:focus {
   box-shadow: none;
 }
 
@@ -477,7 +481,6 @@ input:focus:invalid {
     grid-area: 1/1/-1/-1;
   }
 }
-
 
 @media (max-width: 800px) {
   #peaky-blinders {

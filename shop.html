@@ -37,16 +37,24 @@
               >Products</a
             >
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-secondary px-4 py-2">Pages</a>
-          </li>
         </ul>
 
         <div class="col-md-3 text-end">
-          <a href="#"><img src="images/search.svg" alt="Search" /></a>
-          <a href="#"><img src="images/profile.svg" alt="Profile" /></a>
-          <a href="#"><img src="images/star.svg" alt="Favoriutes" /></a>
-          <a href="cart.html"><img src="images/cart.svg" alt="Cart" /></a>
+          <a href="#" title="search"
+            ><img src="images/search.svg" alt="Search"
+          /></a>
+          <a href="#" title="favoriutes"
+            ><img src="images/star.svg" alt="Favoriutes"
+          /></a>
+          <a href="cart.html" title="cart"
+            ><img src="images/cart.svg" alt="Cart"
+          /></a>
+          <a onclick="logout()" title="logout"
+            ><img
+              src="images/logout.svg"
+              alt="Logout"
+              style="width: 23px; height: 23px"
+          /></a>
         </div>
       </div>
     </header>
@@ -71,7 +79,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-4">
-            <div class="accordion" id="accordionExample">
+            <div class="accordion" id="accordionFilters">
               <div class="accordion-item border-0">
                 <h2 class="accordion-header">
                   <button
@@ -88,25 +96,25 @@
                 <div
                   id="filter"
                   class="accordion-collapse collapse show"
-                  data-bs-parent="#accordionExample"
+                  data-bs-parent="#accordionFilters"
                 >
                   <div class="accordion-body">
                     <div class="mt-4">
                       <h4 class="fs-5">Size</h4>
                       <div class="d-flex flex-wrap mt-3 sizes-wrapper">
-                        <button class="btn btn-outline-secondary" id="sSize">
+                        <button class="btn btn-outline-secondary" id="s">
                           S
                         </button>
-                        <button class="btn btn-outline-secondary" id="mSize">
+                        <button class="btn btn-outline-secondary" id="m">
                           M
                         </button>
-                        <button class="btn btn-outline-secondary" id="lSize">
+                        <button class="btn btn-outline-secondary" id="l">
                           L
                         </button>
-                        <button class="btn btn-outline-secondary" id="xlSize">
+                        <button class="btn btn-outline-secondary" id="xl">
                           XL
                         </button>
-                        <button class="btn btn-outline-secondary" id="2xlSize">
+                        <button class="btn btn-outline-secondary" id="2xl">
                           2XL
                         </button>
                       </div>
@@ -115,7 +123,7 @@
                     <div class="mt-4">
                       <h4 class="fs-5">Color</h4>
                       <div class="d-flex flex-wrap mt-3 color-wrapper">
-                        <button class="btn" id="#FF6C6C"></button>
+                        <button class="btn" id="colors#FF6C6C"></button>
                         <button class="btn" id="#FF7629"></button>
                         <button class="btn" id="#FFF06C"></button>
                         <button class="btn" id="#9BFF6C"></button>
@@ -198,202 +206,16 @@
             </div>
           </div>
           <div class="col-lg-9 col-md-8">
-            <h3 class="fs-6 mb-4" id="productsHeading">Best selling</h3>
+            <h3 class="fs-6 mb-4" id="productsHeading"></h3>
             <div class="products-wrapper">
-              <div class="row gy-3">
-                <div class="col-lg-4 col-md-6">
-                  <div class="card rounded-0 border-0">
-                    <img
-                      src="images/products/product10.png"
-                      class="card-img-top object-fit-cover w-100 rounded-0"
-                      alt="Fashion model"
-                      style="height: 400px"
-                    />
-                    <div class="card-body p-1">
-                      <h4 class="card-title">Rounded Red Hat</h4>
-                      <p class="card-text">$8.00</p>
-                      <div class="d-flex flex-wrap mt-3 color-wrapper">
-                        <button class="btn" id="#FF6C6C"></button>
-                        <button class="btn selected" id="#FFF629"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card sold-out rounded-0 border-0">
-                    <img
-                      src="images/products/product11.png"
-                      class="card-img-top object-fit-cover w-100 rounded-0"
-                      alt="Fashion model"
-                      style="height: 400px"
-                    />
-                    <div class="card-body p-1">
-                      <h4 class="card-title">Long-seleeve Coat</h4>
-                      <p class="card-text">$106.00</p>
-                      <div class="d-flex flex-wrap mt-3 color-wrapper">
-                        <button class="btn selected" id="#EBE6DB"></button>
-                        <button class="btn" id="#C1E1C1"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card rounded-0 border-0">
-                    <img
-                      src="images/products/product12.png"
-                      class="card-img-top object-fit-cover w-100 rounded-0"
-                      alt="Fashion model"
-                      style="height: 400px"
-                    />
-                    <div class="card-body p-1">
-                      <h4 class="card-title">Linen-blend Shirt</h4>
-                      <p class="card-text">$17.00</p>
-                      <div class="d-flex flex-wrap mt-3 color-wrapper">
-                        <button class="btn" id="#8DB4D2"></button>
-                        <button class="btn selected" id="#FFD1DC"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                  <div class="card rounded-0 border-0">
-                    <img
-                      src="images/products/product13.png"
-                      class="card-img-top object-fit-cover w-100 rounded-0"
-                      alt="Fashion model"
-                      style="height: 400px"
-                    />
-                    <div class="card-body p-1">
-                      <h4 class="card-title">Rounded Red Hat</h4>
-                      <p class="card-text">$8.00</p>
-                      <div class="d-flex flex-wrap mt-3 color-wrapper">
-                        <button class="btn" id="#FF6C6C"></button>
-                        <button class="btn selected" id="#FFF629"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card sold-out rounded-0 border-0">
-                    <img
-                      src="images/products/product14.png"
-                      class="card-img-top object-fit-cover w-100 rounded-0"
-                      alt="Fashion model"
-                      style="height: 400px"
-                    />
-                    <div class="card-body p-1">
-                      <h4 class="card-title">Long-seleeve Coat</h4>
-                      <p class="card-text">$106.00</p>
-                      <div class="d-flex flex-wrap mt-3 color-wrapper">
-                        <button class="btn selected" id="#EBE6DB"></button>
-                        <button class="btn" id="#C1E1C1"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card rounded-0 border-0">
-                    <img
-                      src="images/products/product15.png"
-                      class="card-img-top object-fit-cover w-100 rounded-0"
-                      alt="Fashion model"
-                      style="height: 400px"
-                    />
-                    <div class="card-body p-1">
-                      <h4 class="card-title">Linen-blend Shirt</h4>
-                      <p class="card-text">$17.00</p>
-                      <div class="d-flex flex-wrap mt-3 color-wrapper">
-                        <button class="btn" id="#8DB4D2"></button>
-                        <button class="btn selected" id="#FFD1DC"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                  <div class="card rounded-0 border-0">
-                    <img
-                      src="images/products/product16.png"
-                      class="card-img-top object-fit-cover w-100 rounded-0"
-                      alt="Fashion model"
-                      style="height: 400px"
-                    />
-                    <div class="card-body p-1">
-                      <h4 class="card-title">Rounded Red Hat</h4>
-                      <p class="card-text">$8.00</p>
-                      <div class="d-flex flex-wrap mt-3 color-wrapper">
-                        <button class="btn" id="#FF6C6C"></button>
-                        <button class="btn selected" id="#FFF629"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card rounded-0 border-0">
-                    <img
-                      src="images/products/product17.png"
-                      class="card-img-top object-fit-cover w-100 rounded-0"
-                      alt="Fashion model"
-                      style="height: 400px"
-                    />
-                    <div class="card-body p-1">
-                      <h4 class="card-title">Long-seleeve Coat</h4>
-                      <p class="card-text">$106.00</p>
-                      <div class="d-flex flex-wrap mt-3 color-wrapper">
-                        <button class="btn selected" id="#EBE6DB"></button>
-                        <button class="btn" id="#C1E1C1"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card sold-out rounded-0 border-0">
-                    <img
-                      src="images/products/product5.png"
-                      class="card-img-top object-fit-cover w-100 rounded-0"
-                      alt="Fashion model"
-                      style="height: 400px"
-                    />
-                    <div class="card-body p-1">
-                      <h4 class="card-title">Linen-blend Shirt</h4>
-                      <p class="card-text">$17.00</p>
-                      <div class="d-flex flex-wrap mt-3 color-wrapper">
-                        <button class="btn" id="#8DB4D2"></button>
-                        <button class="btn selected" id="#FFD1DC"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="row gy-3"></div>
 
               <nav
                 aria-label="products pagination"
                 class="mt-5 ms-auto d-block"
+                id="products-paginator"
               >
-                <ul class="pagination justify-content-center">
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item active" aria-current="page">
-                    <a class="page-link" href="#">2</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#"
-                      ><svg
-                        width="7"
-                        height="8"
-                        viewBox="0 0 7 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2.85179 3.81408L0.451787 0.710078L1.25179 -0.00992203L4.29179 3.75008L1.25179 7.51008L0.451787 6.79008L2.85179 3.81408ZM5.41179 3.81408L3.01179 0.710078L3.81179 -0.00992203L6.85179 3.75008L3.81179 7.51008L3.01179 6.79008L5.41179 3.81408Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+                <ul class="pagination justify-content-center"></ul>
               </nav>
             </div>
           </div>
@@ -690,9 +512,11 @@
         >
       </div>
     </footer>
+    <script src="js/demo.js"></script>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/slidder.js"></script>
-    <script src="js/colors.js"></script>
     <script src="js/timeDisplay.js"></script>
+    <script src="js/products.js"></script>
   </body>
 </html>
