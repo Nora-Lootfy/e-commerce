@@ -213,7 +213,7 @@ th {
 .categories a {
   padding: 10px 20px;
   text-decoration: none !important;
-  color: #8a8a8a !important;
+  color: #000;
 }
 
 .categories a.active {
@@ -352,6 +352,10 @@ th {
 .sizes-wrapper button.selected {
   background-color: #000;
   color: #fff;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .color-wrapper button {
@@ -501,5 +505,8 @@ input:focus:invalid {
   }
   .slidder-pointers {
     transform: translateX(-50%);
+  }
+  .products-wrapper.slider {
+    transform:  translateX(0);
   }
 }

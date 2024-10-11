@@ -4,15 +4,24 @@ let products = [
     url: "product.html?id=1",
     title: "Rounded Red Hat",
     image: "images/products/product10.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     oldPrice: 26,
     price: 150,
     colors: [
       {
         name: "#ff6c6c",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#fff629",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -29,14 +38,23 @@ let products = [
     url: "product.html?id=2",
     title: "Long-seleeve Coat",
     image: "images/products/product11.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 106,
     colors: [
       {
         name: "#ebe6db",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#c1e1c1",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -53,15 +71,24 @@ let products = [
     url: "product.html?id=3",
     title: "Linen-blend Shirt",
     image: "images/products/product12.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     oldPrice: 50,
     price: 17,
     colors: [
       {
         name: "#8db4d2",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#ffd1dc",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -78,14 +105,23 @@ let products = [
     url: "product.html?id=4",
     title: "Rounded Red Hat",
     image: "images/products/product13.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 8,
     colors: [
       {
         name: "#ff6c6c",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#fff629",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -102,14 +138,23 @@ let products = [
     url: "product.html?id=21",
     title: "Long-seleeve Coat",
     image: "images/products/product14.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 106,
     colors: [
       {
         name: "#ebe6db",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#c1e1c1",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -126,14 +171,23 @@ let products = [
     url: "product.html?id=5",
     title: "Linen-blend Shirt",
     image: "images/products/product15.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 17,
     colors: [
       {
         name: "#8db4d2",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#ffd1dc",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -150,14 +204,23 @@ let products = [
     url: "product.html?id=6",
     title: "Rounded Red Hat",
     image: "images/products/product15.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 8,
     colors: [
       {
         name: "#ff6c6c",
+        nickname: "green",
         selected: true,
       },
       {
         name: "#fff629",
+        nickname: "red",
         selected: false,
       },
     ],
@@ -174,14 +237,23 @@ let products = [
     url: "product.html?id=7",
     title: "Long-seleeve Coat",
     image: "images/products/product17.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 106,
     colors: [
       {
         name: "#ebe6db",
+        nickname: "orange",
         selected: true,
       },
       {
         name: "#c1e1c1",
+        nickname: "yellow",
         selected: false,
       },
     ],
@@ -198,14 +270,27 @@ let products = [
     url: "product.html?id=8",
     title: "Linen-blend Shirt",
     image: "images/products/product5.png",
+    views: [
+      "images/products/product13.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
+    oldPrice: 50,
     price: 17,
     colors: [
       {
         name: "#8db4d2",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#ffd1dc",
+        nickname: "purple",
         selected: false,
       },
     ],
@@ -222,15 +307,24 @@ let products = [
     url: "product.html?id=9",
     title: "Linen-blend Shirt",
     image: "images/products/product5.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     oldPrice: 25,
     price: 17,
     colors: [
       {
         name: "#8db4d2",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#ffd1dc",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -247,14 +341,23 @@ let products = [
     url: "product.html?id=10",
     title: "Linen-blend Shirt",
     image: "images/products/product4.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 17,
     colors: [
       {
         name: "#8db4d2",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#ffd1dc",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -271,14 +374,23 @@ let products = [
     url: "product.html?id=11",
     title: "Linen-blend Shirt",
     image: "images/products/product5.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 17,
     colors: [
       {
         name: "#8db4d2",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#ffd1dc",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -295,14 +407,23 @@ let products = [
     url: "product.html?id=12",
     title: "Linen-blend Shirt",
     image: "images/products/product5.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 17,
     colors: [
       {
         name: "#8db4d2",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#ffd1dc",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -319,14 +440,23 @@ let products = [
     url: "product.html?id=13",
     title: "Rounded Red Hat",
     image: "images/products/product10.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 8,
     colors: [
       {
         name: "#ff6c6c",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#fff629",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -343,14 +473,23 @@ let products = [
     url: "product.html?id=14",
     title: "Long-seleeve Coat",
     image: "images/products/product11.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 106,
     colors: [
       {
         name: "#ebe6db",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#c1e1c1",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -367,15 +506,24 @@ let products = [
     url: "product.html?id=15",
     title: "Linen-blend Shirt",
     image: "images/products/product12.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     oldPrice: 30,
     price: 17,
     colors: [
       {
         name: "#8db4d2",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#ffd1dc",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -392,14 +540,23 @@ let products = [
     url: "product.html?id=16",
     title: "Rounded Red Hat",
     image: "images/products/product13.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 8,
     colors: [
       {
         name: "#ff6c6c",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#fff629",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -416,14 +573,23 @@ let products = [
     url: "product.html?id=17",
     title: "Rounded Red Hat",
     image: "images/products/product10.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 8,
     colors: [
       {
         name: "#ff6c6c",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#fff629",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -440,15 +606,24 @@ let products = [
     url: "product.html?id=18",
     title: "Long-seleeve Coat",
     image: "images/products/product11.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     oldPrice: 200,
     price: 106,
     colors: [
       {
         name: "#ebe6db",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#c1e1c1",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -465,14 +640,23 @@ let products = [
     url: "product.html?id=19",
     title: "Linen-blend Shirt",
     image: "images/products/product12.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 17,
     colors: [
       {
         name: "#8db4d2",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#ffd1dc",
+        nickname: "blue",
         selected: false,
       },
     ],
@@ -489,14 +673,23 @@ let products = [
     url: "product.html?id=20",
     title: "Rounded Red Hat",
     image: "images/products/product13.png",
+    views: [
+      "images/products/product5.png",
+      "images/products/product6.png",
+      "images/products/product7.png",
+      "images/products/product8.png",
+      "images/products/product9.png",
+    ],
     price: 8,
     colors: [
       {
         name: "#ff6c6c",
+        nickname: "blue",
         selected: true,
       },
       {
         name: "#fff629",
+        nickname: "blue",
         selected: false,
       },
     ],

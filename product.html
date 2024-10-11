@@ -13,7 +13,10 @@
         class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between"
       >
         <div class="col-md-3 mb-2 mb-md-0">
-          <a href="index.html" class="mb-3 mb-md-0 me-md-auto text-decoration-none">
+          <a
+            href="index.html"
+            class="mb-3 mb-md-0 me-md-auto text-decoration-none"
+          >
             <h1 class="text-secondary fw-normal" style="font-size: 50px">
               FASCO
             </h1>
@@ -69,69 +72,15 @@
         <div class="row">
           <div class="col-md-6">
             <div class="row" style="height: calc(32px * 2 + 550px)">
-              <div class="col-lg-2 col-3 d-flex flex-column overflow-y-scroll">
-                <div class="img-wrapper">
-                  <img
-                    src="images/products/product18.png"
-                    class="w-100"
-                    alt="Product view"
-                    style="height: 78px; object-fit: cover"
-                  />
-                </div>
-                <div class="img-wrapper current">
-                  <img
-                    src="images/products/product7.png"
-                    class="w-100"
-                    alt="Product view"
-                    style="height: 78px; object-fit: cover"
-                  />
-                </div>
-                <div class="img-wrapper">
-                  <img
-                    src="images/products/product19.png"
-                    class="w-100"
-                    alt="Product view"
-                    style="height: 78px; object-fit: cover"
-                  />
-                </div>
-                <div class="img-wrapper">
-                  <img
-                    src="images/products/product20.png"
-                    class="w-100"
-                    alt="Product view"
-                    style="height: 78px; object-fit: cover"
-                  />
-                </div>
-                <div class="img-wrapper">
-                  <img
-                    src="images/products/product21.png"
-                    class="w-100"
-                    alt="Product view"
-                    style="height: 78px; object-fit: cover"
-                  />
-                </div>
-                <div class="img-wrapper">
-                  <img
-                    src="images/products/product22.png"
-                    class="w-100"
-                    alt="Product view"
-                    style="height: 78px; object-fit: cover"
-                  />
-                </div>
-                <div class="img-wrapper">
-                  <img
-                    src="images/products/product23.png"
-                    class="w-100"
-                    alt="Product view"
-                    style="height: 78px; object-fit: cover"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-9 col-8 my-4 h-100">
+              <div
+                class="col-lg-2 col-3 d-flex flex-column overflow-y-scroll"
+                id="views"
+              ></div>
+              <div class="col-lg-9 col-8 my-4 h-100" id="main-img">
                 <img
-                  src="images/products/product7.png"
+                  src=""
                   alt="Fashion model"
-                  class="object-fit-cover w-100"
+                  class="object-fit-cover w-100 "
                   style="height: 550px"
                 />
               </div>
@@ -140,7 +89,7 @@
           <div class="col-md-6 py-4">
             <h3 class="h6 text-secondary">FASCO</h3>
             <div class="d-flex justify-content-between">
-              <h2>Denim Jacket</h2>
+              <h2 id="product-title"></h2>
               <button
                 class="btn"
                 style="
@@ -169,12 +118,8 @@
               (3)
             </div>
             <div class="price mb-3">
-              <span class="current-price">$39.00</span>
-              <span class="old-price">$59.00</span>
-              <span
-                class="badge rounded-pill bg-danger text-white fw-normal py-1"
-                >SAVE 33%</span
-              >
+              <span class="current-price"></span>
+              <span class="old-price"></span>
             </div>
             <div
               class="views mb-4 text-secondary"
@@ -210,43 +155,24 @@
               >
             </div>
 
-            <p style="color: #666">Only <b>9</b> item(s) left in stock!</p>
+            <p style="color: #666">
+              Only <b class="product-count"></b> item(s) left in stock!
+            </p>
             <div
-              class="progress mb-3"
+              class="progress mb-3 product-left"
               role="progressbar"
               aria-label="items left"
               aria-valuenow="0"
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              <div class="progress-bar bg-danger" style="width: 5%"></div>
+              <div class="progress-bar bg-danger" style="width: 0%"></div>
             </div>
 
-            <div class="mb-4">
-              <h4 class="h5">Size: M</h4>
-              <div class="d-flex flex-wrap mt-3 sizes-wrapper">
-                <button class="btn btn-outline-secondary selected" id="sSize">
-                  S
-                </button>
-                <button class="btn btn-outline-secondary" id="mSize">M</button>
-                <button class="btn btn-outline-secondary" id="lSize">L</button>
-                <button class="btn btn-outline-secondary" id="xlSize">
-                  XL
-                </button>
-                <button class="btn btn-outline-secondary" id="2xlSize">
-                  2XL
-                </button>
-              </div>
-            </div>
+            <div class="mb-4 product-size"></div>
 
-            <div class="mb-4">
-              <h4 class="h5">Color: Blue</h4>
-              <div class="d-flex flex-wrap mt-3 color-wrapper">
-                <button class="btn selected" id="#8DB4D2"></button>
-                <button class="btn" id="#000"></button>
-                <button class="btn" id="#FFD1DC"></button>
-              </div>
-            </div>
+            <div class="mb-4 product-color"></div>
+
             <div
               class="mb-4 d-flex flex-wrap align-items-end justify-content-between gx-4"
               style="gap: 20px"
@@ -273,7 +199,7 @@
                       />
                     </svg>
                   </button>
-                  <span class="p-3">1</span>
+                  <span class="p-3 current-value">1</span>
                   <button id="plus" class="btn p-3">
                     <svg
                       width="13"
@@ -905,10 +831,10 @@
         >
       </div>
     </footer>
+    <script src="js/demo.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/slidder.js"></script>
     <script src="js/timeDisplay.js"></script>
     <script src="js/singleProduct.js"></script>
-    <script src="js/colors.js"></script>
   </body>
 </html>
