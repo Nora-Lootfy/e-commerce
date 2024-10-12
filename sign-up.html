@@ -34,79 +34,95 @@
                 Create Account
               </p>
               <div class="btn-wrapper d-flex justify-content-between">
-                <button class="btn outline-primary px-3 me-3">
+                <a class="btn outline-primary px-3 me-3">
                   <img
                     src="images/google.svg"
                     alt="Google"
                     class="me-1"
                     style="width: 36px"
                   />Sign Up with Google
-                </button>
-                <button class="btn outline-primary px-3">
+                </a>
+                <a class="btn outline-primary px-3">
                   <img
                     src="images/gmail.svg"
                     alt="Gmail"
                     class="me-1"
                     style="width: 36px"
                   />Sign Up with Email
-                </button>
+                </a>
               </div>
               <div class="text-center my-5 line-wrapper" style="color: #838383">
                 <span class="fw-bold fs-3">OR</span>
               </div>
 
-              <form class="text-center">
+              <form class="text-center" method="POST" id="sign-up">
                 <div class="row">
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-6 mb-3 text-start">
                     <input
                       type="text"
                       placeholder="First Name"
                       class="form-control"
+                      name="firstname"
                       aria-label="First Name"
+                      required
                     />
+                    <span class="alert text-danger invisible" style="font-size: 10px;">This field is required</span>
                   </div>
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-6 mb-3 text-start">
                     <input
                       type="text"
                       placeholder="Last Name"
+                      name="lastname"
                       class="form-control"
                       aria-label="Last Name"
+                      required
                     />
+                    <span class="alert text-danger invisible" style="font-size: 10px;">This field is required</span>
                   </div>
 
-                  <div class="col-12 mb-3">
+                  <div class="col-12 mb-3 text-start">
                     <input
                       type="text"
                       placeholder="Email"
-                      class="form-control mb-3"
+                      name="email"
+                      class="form-control"
                       aria-label="Email"
+                      required
                     />
+                    <span class="alert text-danger invisible" style="font-size: 10px;">This field is required</span>
                   </div>
-                  <div class="col-12 mb-3">
+                  <div class="col-12 mb-3 text-start">
                     <input
                       type="password"
                       placeholder="Password"
-                      class="form-control mb-3"
+                      name="password"
+                      class="form-control"
                       aria-label="Password"
+                      required
                     />
+                    <span class="alert text-danger invisible" style="font-size: 10px;">This field is required</span>
                   </div>
-                  <div class="col-12 mb-3">
+                  <div class="col-12 mb-3 text-start">
                     <input
                       type="password"
+                      name="password_confirmation"
                       placeholder="Confirm Password"
-                      class="form-control mb-3"
+                      class="form-control"
                       aria-label="Confirm Password"
+                      required
                     />
+                    <span class="alert text-danger invisible" style="font-size: 10px;">This field is required</span>
                   </div>
                 </div>
 
                 <button
-                  type="button"
-                  class="btn btn-dark w-75 mb-3"
+                  type="submit"
+                  class="btn btn-dark w-75"
                   style="background-color: #000"
                 >
                   Create Account
                 </button>
+                <span class="alert text-danger d-block invisible form-error" style="font-size: 10px;"></span>
                 <p>
                   Already have an account?
                   <a href="sign-in.html" class="text-decoration-none">Login</a>
@@ -122,6 +138,7 @@
         </div>
       </div>
     </main>
+    <script src="js/sign-up.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

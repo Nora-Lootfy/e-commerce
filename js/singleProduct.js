@@ -1,4 +1,6 @@
 const singleProduct = document.getElementById("single-product");
+let itemData = {};
+const currentAuth = localStorage.getItem("authID");
 
 if (singleProduct) {
   const id = new URL(window.location.href).searchParams.get("id");
@@ -13,6 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // get the product
     const id = new URL(window.location.href).searchParams.get("id");
     const product = searchProduct(id);
+
+    itemData = {
+      ...itemData,
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      count: product.count,
+    };
 
     // render views of the product
     renderViews(singleProduct.querySelector("#views"), product);
@@ -57,6 +67,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // quantity
     renderQuantity(singleProduct.querySelector(".quantity-wrapper"), product);
+
+    // add to cart
+    const addToCartBtn = singleProduct.querySelector("#addToCartBtn");
+    if (product.count == 0) {
+      addToCartBtn.disabled = true;
+      addToCartBtn.setAttribute("aria-disabled", "true");
+    } else {
+      addToCartBtn.addEventListener("click", () => {
+        const addToCart = singleProduct.querySelector("#addToCart");
+
+        addItemToCart(addToCart, itemData);
+      });
+    }
   }
 });
 
@@ -110,6 +133,8 @@ function renderViews(viewsContainer, product) {
   const img = singleProduct.querySelector("#main-img img");
   img.src = product.image;
 
+  itemData = { ...itemData, image: product.image };
+
   const views = viewsContainer.querySelectorAll(".img-wrapper");
 
   views.forEach((view) => {
@@ -134,6 +159,8 @@ function renderSize(sizeContainer, product) {
   <h4 class="h5 current-size">Size: ${product.sizes[0].toUpperCase()}</h4>
   <div class="d-flex flex-wrap mt-3 sizes-wrapper">
   `;
+
+  itemData = { ...itemData, size: product.sizes[0] };
 
   sizes.forEach((size) => {
     html += `
@@ -161,6 +188,7 @@ function renderSize(sizeContainer, product) {
   btns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       currentSize.innerHTML = `Size: ${e.target.id.toUpperCase()}`;
+      itemData = { ...itemData, size: e.target.id };
 
       btns.forEach((btn) => {
         btn.classList.remove("selected");
@@ -184,6 +212,8 @@ function renderColor(colorContainer, product) {
       html = `
         <h4 class="h5 current-color">Color: ${color.nickname.toUpperCase()}</h4>
       `;
+
+      itemData = { ...itemData, color: color.nickname };
     }
   });
 
@@ -212,30 +242,148 @@ function renderColor(colorContainer, product) {
         btn.classList.remove("selected");
       });
 
-      currentColor.innerHTML = `Color: ${
-        product.colors.find((c) => c.name == e.target.id).nickname.toUpperCase()
-      }`;
+      colorNickname = product.colors.find(
+        (c) => c.name == e.target.id
+      ).nickname;
+
+      currentColor.innerHTML = `Color: ${colorNickname.toUpperCase()}`;
       e.target.classList.add("selected");
+      itemData = { ...itemData, color: colorNickname };
     });
   });
 }
 
+function renderQuantity(
+  quantityContainer,
+  product,
+  current = 1,
+  saveToCart = false,
+  cartItems = []
+) {
+  const minus = quantityContainer.querySelector("#minus");
+  const plus = quantityContainer.querySelector("#plus");
+  const currentValue = quantityContainer.querySelector(".current-value");
 
-function renderQuantity(quantityContainer, product) {
-  const minus = quantityContainer.querySelector('#minus');
-  const plus = quantityContainer.querySelector('#plus');
-  const currentValue = quantityContainer.querySelector('.current-value');
-
-  if(product.count == 0) {
+  if (product.count == 0) {
     minus.disabled = true;
+    minus.setAttribute("aria-disabled", "true");
     plus.disabled = true;
-    currentValue.innerHTML = '0';
+    plus.setAttribute("aria-disabled", "true");
+    currentValue.innerHTML = "0";
   } else {
-    minus.addEventListener('click', ()=> {
+    itemData = { ...itemData, quantity: current };
+    currentValue.innerHTML = `${current}`;
+
+    minus.addEventListener("click", () => {
       currentValue.innerHTML = Math.max(Number(currentValue.innerHTML) - 1, 1);
-    })
-    plus.addEventListener('click', ()=> {
-      currentValue.innerHTML = Math.min(Number(currentValue.innerHTML) + 1, product.count);
-    })
+      itemData = { ...itemData, quantity: Number(currentValue.innerHTML) };
+
+      if (saveToCart) {
+        foundItemIdx = alreadyAddedItem(cartItems, product);
+        if (foundItemIdx !== -1) {
+          cartItems[foundItemIdx] = itemData;
+        } else {
+          cartItems.push(itemData);
+        }
+        storeInCart(cartItems);
+      }
+    });
+    plus.addEventListener("click", () => {
+      currentValue.innerHTML = Math.min(
+        Number(currentValue.innerHTML) + 1,
+        product.count
+      );
+      itemData = { ...itemData, quantity: Number(currentValue.innerHTML) };
+
+      if (saveToCart) {
+        foundItemIdx = alreadyAddedItem(cartItems, product);
+        if (foundItemIdx !== -1) {
+          cartItems[foundItemIdx] = itemData;
+        } else {
+          cartItems.push(itemData);
+        }
+        storeInCart(cartItems);
+      }
+    });
   }
+}
+
+function addItemToCart(container, item) {
+  const cartData = localStorage.getItem("cart");
+  let cartItems = cartData ? JSON.parse(cartData)[currentAuth] ?? [] : [];
+
+  foundItemIdx = alreadyAddedItem(cartItems, item);
+
+  if (foundItemIdx === -1) {
+    cartItems.push(item);
+    storeInCart(cartItems);
+
+    notify("Product added to the cart successfully");
+  } else {
+    // show alert that item already in the cart
+    notify("Product is already in your cart");
+    item.quantity = Math.max(item.quantity, cartItems[foundItemIdx].quantity);
+  }
+
+  renderCartItem(container, item, cartItems);
+}
+
+function renderCartItem(container, item, cartItems) {
+  container.querySelector("img").src = item.image;
+  container.querySelector(".product-name").innerHTML = item.title;
+  container.querySelector(".product-color").innerHTML =
+    item.color.toUpperCase();
+  container.querySelector(".product-price").innerHTML = `$${item.price.toFixed(
+    2
+  )}`;
+
+  renderQuantity(
+    container.querySelector(".quantity-wrapper"),
+    item,
+    item.quantity,
+    true,
+    cartItems
+  );
+
+  const minus = container.querySelector(".quantity-wrapper #minus");
+  const plus = container.querySelector(".quantity-wrapper #plus");
+  const currentValue = container.querySelector(
+    ".quantity-wrapper .current-value"
+  );
+
+  const total = container.querySelector(".product-total-price");
+
+  let totalPrice = Number(currentValue.innerHTML) * itemData.price;
+  total.innerHTML = `$${totalPrice.toFixed(2)}`;
+
+  [minus, plus].forEach((btn) => {
+    btn.addEventListener("click", () => {
+      totalPrice = Number(currentValue.innerHTML) * itemData.price;
+      total.innerHTML = `$${totalPrice.toFixed(2)}`;
+    });
+  });
+}
+
+function alreadyAddedItem(itemList, item) {
+  return itemList.findIndex(
+    (existingItem) =>
+      existingItem.image === item.image &&
+      existingItem.color === item.color &&
+      existingItem.size === item.size &&
+      existingItem.id === item.id
+  );
+}
+
+function notify(msg) {
+  const notification = document.getElementById("notification");
+  notification.querySelector(".toast-body").innerHTML = msg;
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(notification);
+  toastBootstrap.show();
+}
+
+function storeInCart(data) {
+  const cart = JSON.parse(localStorage.getItem("cart")) ?? {};
+
+  cart[currentAuth] = data;
+  localStorage.setItem("cart", JSON.stringify(cart));
 }

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart page</title>
+    <script src="js/middleware.js"></script>
+    <script src="js/logout.js"></script>
     <link rel="stylesheet" href="css/main.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -22,7 +24,7 @@
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <li class="nav-item">
-            <a href="/" class="nav-link text-secondary px-4 py-2">Home</a>
+            <a href="index.html" class="nav-link text-secondary px-4 py-2">Home</a>
           </li>
           <li class="nav-item">
             <a href="shop.html" class="nav-link text-secondary px-4 py-2"
@@ -34,16 +36,24 @@
               >Products</a
             >
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-secondary px-4 py-2">Pages</a>
-          </li>
         </ul>
 
         <div class="col-md-3 text-end">
-          <a href="#"><img src="images/search.svg" alt="Search" /></a>
-          <a href="#"><img src="images/profile.svg" alt="Profile" /></a>
-          <a href="#"><img src="images/star.svg" alt="Favoriutes" /></a>
-          <a href="cart.html"><img src="images/cart.svg" alt="Cart" /></a>
+          <a href="#" title="search" class="cursor-pointer"
+            ><img src="images/search.svg" alt="Search" 
+          /></a>
+          <a href="#" title="favoriutes" class="cursor-pointer"
+            ><img src="images/star.svg" alt="Favoriutes"
+          /></a>
+          <a href="cart.html" title="cart" class="cursor-pointer"
+            ><img src="images/cart.svg" alt="Cart"
+          /></a>
+          <a onclick="logout()" title="logout" class="cursor-pointer"
+            ><img
+              src="images/logout.svg"
+              alt="Logout"
+              style="width: 23px; height: 23px"
+          /></a>
         </div>
       </div>
     </header>

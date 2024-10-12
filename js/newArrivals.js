@@ -72,7 +72,7 @@ function renderElemnet(products, id) {
           />
           <div class="card-body py-2">
             <div class="d-flex justify-content-between">
-              <h3 class="card-title text-secondary">Shiny Dress</h3>
+              <h3 class="card-title text-secondary">${prod.title}</h3>
               <img src="images/stars.svg" alt="5 stars" />
             </div>
             <h4

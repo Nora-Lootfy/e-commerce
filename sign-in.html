@@ -55,39 +55,56 @@
                 <span class="fw-bold fs-3">OR</span>
               </div>
 
-              <form class="text-center">
+              <form class="text-start" id="sign-in" method="post">
                 <input
                   type="text"
                   placeholder="Email"
-                  class="form-control mb-3"
+                  class="form-control"
                   aria-label="Email"
+                  name="email"
                 />
+                <span
+                  class="alert text-danger invisible"
+                  style="font-size: 10px"
+                  >This field is required</span
+                >
                 <input
                   type="password"
                   placeholder="Password"
-                  class="form-control mb-5"
+                  name="password"
+                  class="form-control"
                   aria-label="password"
                 />
-
-                <button
-                  type="button"
-                  class="btn btn-dark w-75 mb-2"
-                  style="background-color: #000"
+                <span
+                  class="alert text-danger invisible mb-2 d-block"
+                  style="font-size: 10px"
+                  >This field is required</span
                 >
-                  Sign In
-                </button>
-                <a
-                  class="btn btn-outline-primary w-75 mb-1 d-block mx-auto"
-                  href="sign-up.html"
-                >
-                  Register
-                </a>
-                <a
-                  href="#"
-                  class="fw-semibold d-block w-75 mx-auto text-end text-decoration-none"
-                  style="font-size: 12px"
-                  >Forget Password?</a
-                >
+                <div class="text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-dark w-75"
+                    style="background-color: #000"
+                  >
+                    Sign In
+                  </button>
+                  <span
+                    class="alert text-danger form-error d-block p-1 invisible"
+                    style="font-size: 10px"
+                  ></span>
+                  <a
+                    class="btn btn-outline-primary w-75 mb-1 d-block mx-auto"
+                    href="sign-up.html"
+                  >
+                    Register
+                  </a>
+                  <a
+                    href="#"
+                    class="fw-semibold d-block w-75 mx-auto text-end text-decoration-none"
+                    style="font-size: 12px"
+                    >Forget Password?</a
+                  >
+                </div>
               </form>
             </div>
           </div>
@@ -100,5 +117,6 @@
       </div>
     </main>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sign-in.js"></script>
   </body>
 </html>
