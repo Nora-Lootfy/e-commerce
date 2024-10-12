@@ -24,7 +24,9 @@
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <li class="nav-item">
-            <a href="index.html" class="nav-link text-secondary px-4 py-2">Home</a>
+            <a href="index.html" class="nav-link text-secondary px-4 py-2"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
             <a href="shop.html" class="nav-link text-secondary px-4 py-2"
@@ -40,7 +42,7 @@
 
         <div class="col-md-3 text-end">
           <a href="#" title="search" class="cursor-pointer"
-            ><img src="images/search.svg" alt="Search" 
+            ><img src="images/search.svg" alt="Search"
           /></a>
           <a href="#" title="favoriutes" class="cursor-pointer"
             ><img src="images/star.svg" alt="Favoriutes"
@@ -76,7 +78,7 @@
 
     <section id="cart">
       <div class="container">
-        <div class="table-responsive" style="max-height: 80vh;">
+        <div class="table-responsive" style="max-height: 80vh">
           <table class="table">
             <thead>
               <tr>
@@ -86,75 +88,10 @@
                 <th scope="col">Total</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td scope="row">
-                  <div class="row" style="width:500px; max-width:95vw">
-                    <div class="col-5">
-                      <img
-                        src="images/products/product7.png"
-                        alt="Fashion model"
-                        style="height: 225px; object-fit: cover"
-                        class="w-100"
-                      />
-                    </div>
-                    <div class="col-6">
-                      <h3 class="product-name">Denim Jacket</h3>
-                      <p class="text-secondary">
-                        Color : <span class="product-color">Red</span>
-                      </p>
-
-                      <a href="#" class="text-secondary">Remove</a>
-                    </div>
-                  </div>
-                </td>
-                <td class="product-price">$14.80</td>
-                <td>
-                  <div
-                    class="d-flex flex-nowrap align-items-center quantity-wrapper"
-                    style="border: 1px solid #eee; width: 135px"
-                  >
-                    <button id="minus" class="btn p-3">
-                      <svg
-                        width="11"
-                        height="3"
-                        viewBox="0 0 11 3"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.8125 0.9375H1.1875C1.08391 0.9375 1 1.02141 1 1.125V1.875C1 1.97859 1.08391 2.0625 1.1875 2.0625H9.8125C9.91609 2.0625 10 1.97859 10 1.875V1.125C10 1.02141 9.91609 0.9375 9.8125 0.9375Z"
-                          fill="black"
-                          stroke="black"
-                          stroke-width="0.0234375"
-                        />
-                      </svg>
-                    </button>
-                    <span class="p-3">1</span>
-                    <button id="plus" class="btn p-3">
-                      <svg
-                        width="13"
-                        height="13"
-                        viewBox="0 0 13 13"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.8125 5.9375H7.0625V2.1875C7.0625 2.08391 6.97859 2 6.875 2H6.125C6.02141 2 5.9375 2.08391 5.9375 2.1875V5.9375H2.1875C2.08391 5.9375 2 6.02141 2 6.125V6.875C2 6.97859 2.08391 7.0625 2.1875 7.0625H5.9375V10.8125C5.9375 10.9161 6.02141 11 6.125 11H6.875C6.97859 11 7.0625 10.9161 7.0625 10.8125V7.0625H10.8125C10.9161 7.0625 11 6.97859 11 6.875V6.125C11 6.02141 10.9161 5.9375 10.8125 5.9375Z"
-                          fill="black"
-                          stroke="black"
-                          stroke-width="0.0234375"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </td>
-                <td class="product-price-total">$14.80</td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
           </table>
         </div>
-        <div style="max-width: 550px; margin-left: auto; margin-top: 20px;">
+        <div style="max-width: 550px; margin-left: auto; margin-top: 20px">
           <div class="form-group pb-3 border-bottom mb-2">
             <label style="color: #8a8a8a; font-size: 20px"
               ><input
@@ -166,16 +103,17 @@
             >
           </div>
           <div class="d-flex justify-content-between mb-4">
-            <span style="font-family: volkhov, serif;">Subtotal</span>
+            <span style="font-family: volkhov, serif">Subtotal</span>
             <span class="product-price">100$</span>
           </div>
           <div class="text-center">
-            <button
-              class="btn text-white px-5 py-2 w-75"
+            <a
+              href="checkout.html"
+              class="btn text-white px-5 py-2 w-75 checkout"
               style="background-color: #000"
             >
               Checkout
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -285,5 +223,6 @@
       </div>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>
