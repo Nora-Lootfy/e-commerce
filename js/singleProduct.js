@@ -6,14 +6,14 @@ if (singleProduct) {
   const id = new URL(window.location.href).searchParams.get("id");
 
   if (!id) {
-    redircet("index.html");
+    redircet("shop.html");
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (singleProduct) {
+  const id = new URL(window.location.href).searchParams.get("id");
+  if (singleProduct && id) {
     // get the product
-    const id = new URL(window.location.href).searchParams.get("id");
     const product = searchProduct(id);
 
     itemData = {

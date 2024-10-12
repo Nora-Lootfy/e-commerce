@@ -30,6 +30,9 @@ function renderItem(container, item) {
           <p class="text-secondary">
             Color : <span class="product-color">${item.color}</span>
           </p>
+          <p class="text-secondary">
+            Size : <span class="product-size">${item.size}</span>
+          </p>
 
           <a onclick="remove(${
             item.id
@@ -50,10 +53,10 @@ function renderItem(container, item) {
 
 function renderItems(cartItems, container) {
   const table = container.querySelector("table tbody");
-  const totalPriceContainer = container.querySelector(".product-price");
+  const totalPriceContainer = container.querySelector(".overall-price");
 
   table.innerHTML = "";
-console.log(cartItems.length !== 0)
+
   if (cartItems.length !== 0) {
     cartItems.forEach((item) => {
       renderItem(table, item);
