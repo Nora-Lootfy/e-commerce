@@ -145,7 +145,7 @@ function renderViews(viewsContainer, product) {
         view.classList.remove("current");
       });
 
-      e.target.classList.add("selected");
+      e.target.parentNode.classList.add("current");
     });
   });
 }
